@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import 'bootstrap/dist/css/bootstrap.min.css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -123,11 +122,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold tracking-tight;
   }
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
-/* Custom gradient backgrounds */
+/* Custom dynamic gradient backgrounds mapped to CSS Variables */
 .hero-gradient {
-  background: linear-gradient(135deg, oklch(0.99 0.002 264) 0%, oklch(0.96 0.01 264) 100%);
+  background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -154,8 +157,8 @@
 }
 
 .card-gradient {
-  background: linear-gradient(135deg, oklch(1 0 0) 0%, oklch(0.98 0.005 264) 100%);
-  border: 1px solid oklch(0.91 0.005 264);
+  background: linear-gradient(135deg, var(--card) 0%, var(--background) 100%);
+  border: 1px solid var(--border);
   position: relative;
   overflow: hidden;
 }
@@ -167,7 +170,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(var(--primary), 0.1), transparent);
   transition: left 0.5s;
 }
 
@@ -176,7 +179,7 @@
 }
 
 .primary-gradient {
-  background: linear-gradient(135deg, oklch(0.47 0.15 264) 0%, oklch(0.52 0.12 264) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -198,7 +201,7 @@
 }
 
 .secondary-gradient {
-  background: linear-gradient(135deg, oklch(0.96 0.01 264) 0%, oklch(0.94 0.02 264) 100%);
+  background: linear-gradient(135deg, var(--muted) 0%, var(--accent) 100%);
   position: relative;
 }
 
@@ -257,20 +260,16 @@
   transform-style: preserve-3d;
 }
 
-/* Custom scrollbar */
+/* Custom theme-aware scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: oklch(0.96 0.01 264);
+  background: var(--muted);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.47 0.15 264);
+  background: var(--primary);
   border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: oklch(0.42 0.15 264);
 }
