@@ -169,6 +169,16 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
+    id: 35,
+    name: "Mohil Gosar",
+    designation: "Sub Head - Operations Dept.",
+    image:"/core_images/Mohil-Ops-Sub Head.png",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/mohil-gosar?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      github:"https://github.com/MohilGosar"
+    }
+  },
+  {
     id: 14,
     name: "Kian Rodrigues",
     designation: "Head - Public Relations Dept.",
@@ -176,6 +186,16 @@ const teamMembers: TeamMember[] = [
     socials: {
       linkedin:"https://www.linkedin.com/in/kian-rodrigues-a9a292359?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       github:"https://github.com/CosmicGalaxyhehe"
+    }
+  },
+  {
+    id: 28,
+    name: "Aishita Dhingra",
+    designation: "Head - Public Relations Dept.",
+    image: "/core_images/Aishita-Dhingra-PR-Head.jpg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/aishita-dhingra-420111364?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      github:"https://github.com/mailaishitadhingra-design"
     }
   },
   {
@@ -258,6 +278,16 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
+    id: 29,
+    name: "Aarush Atale",
+    designation: "Sub Head - Digital Creatives Dept.",
+    image:"/core_images/Aarush-Atale-DC-Subhead.jpeg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/aarush-atale-b9379934b/",
+      github:"https://github.com/Aarush-ron"
+    }
+  },
+  {
     id: 23,
     name: "Naitik Mehta",
     designation: "Head - Social Media and Content Writing Dept.",
@@ -305,6 +335,56 @@ const teamMembers: TeamMember[] = [
     socials: {
       linkedin:"https://www.linkedin.com/in/kahaan-desai-16789937a",
       github:"https://github.com/kahaandesai987-ctrl"
+    }
+  },
+  {
+    id: 30,
+    name: "Sanya Gomathi",
+    designation: "Head - Research and Development Dept.",
+    image: "/core_images/Sanya-Gomathi-RND Head.png",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/sanya-gomathi-91b305380",
+      github:"https://github.com/sanyagomathi"
+    }
+  },
+  {
+    id: 31,
+    name: "Mahi Jain",
+    designation: "Head - Research and Development Dept.",
+    image:"/core_images/Mahi-Jain-RND-Head.jpeg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/mahi-jain-b8990939a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+      github:"https://github.com/mahijaain"
+    }
+  },
+  {
+    id: 32,
+    name: "Preksha Jain",
+    designation: "Sub Head - Research and Development Dept.",
+    image:"/core_images/Preksha-Jain-RND-Subh Head.jpeg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/preksha-jain-39416a420/",
+      github:"https://github.com/jainpreksha301-ctrl"
+    }
+  },
+  {
+    id: 33,
+    name: "Virti Shah",
+    designation: "Sub Head - Research and Development Dept.",
+    image:"/core_images/Virti-Shah-RND-Sub Head.jpeg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/virti-shah-6936653a3/",
+      github:"https://github.com/Virtishah0808"
+    }
+  },
+  {
+    id: 34,
+    name: "Omkar Mudholkar",
+    designation: "Sub Head - Research and Development Dept.",
+    image:"/core_images/Omkar-RND-Sub Head.jpeg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/omkar-mudholkar-77600337a",
+      github:"https://github.com/omkar9207"
     }
   },
 ];
