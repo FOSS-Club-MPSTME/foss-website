@@ -9,7 +9,7 @@ import { Code, Users, Lightbulb, ArrowRight, Calendar, Globe } from "lucide-reac
 import { ParticlesBackground } from "@/components/ParticlesBackground";
 import { HeroBackground } from "@/components/HeroBackground";
 import { AnimatedGrid } from "@/components/AnimatedGrid";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -48,12 +48,74 @@ const whatWeDoItems = [
   }
 ];
 
-export default function Home() {
-  // This part right here handles the script loading!
+const carouselImages = [
+  { src: "/meeting_images/FOSS Core 2026.jpeg", alt: "FOSS Club Community Meeting" },
+  { src: "/meeting_images/FOSS_Core_Photo_2.jpeg", alt: "Slide 2" },
+  { src: "/meeting_images/FOSS_Core_Photo_3.jpeg", alt: "Slide 3" },
+  { src: "/meeting_images/FOSS_Core_Photo_4.jpeg", alt: "Slide 4" },
+];
+
+function ImageCarousel() {
+  const [index, setIndex] = useState(0);
+
   useEffect(() => {
-    // @ts-ignore
-    import("bootstrap/dist/js/bootstrap.bundle.min.js");
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 2500);
+    return () => clearInterval(timer);
   }, []);
+
+  const goTo = (i: number) => setIndex((i + carouselImages.length) % carouselImages.length);
+
+  return (
+    <div className="relative w-full rounded-2xl shadow-2xl overflow-hidden" style={{ height: "500px" }}>
+      {carouselImages.map((img, i) => (
+        <motion.img
+          key={img.src}
+          src={img.src}
+          alt={img.alt}
+          initial={false}
+          animate={{ opacity: i === index ? 1 : 0 }}
+          transition={{ duration: 0.6 }}
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ pointerEvents: i === index ? "auto" : "none" }}
+        />
+      ))}
+
+      {/* Prev / Next controls */}
+      <button
+        onClick={() => goTo(index - 1)}
+        aria-label="Previous slide"
+        className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+      >
+        ‹
+      </button>
+      <button
+        onClick={() => goTo(index + 1)}
+        aria-label="Next slide"
+        className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors"
+      >
+        ›
+      </button>
+
+      {/* Dots */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {carouselImages.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`Go to slide ${i + 1}`}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              i === index ? "bg-white" : "bg-white/50"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -213,40 +275,7 @@ export default function Home() {
               transition={{ duration: 0.3 }}
               className="relative w-full max-w-4xl mx-auto"
             >
-            {/* Bootstrap carousel added here */}
-            <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner rounded-2xl shadow-2xl">
-                <div className="carousel-item active" data-bs-interval="2500">
-                  <img src="/meeting_images/FOSS Core 2026.jpeg" alt="FOSS Club Community Meeting" className="d-block w-100 object-cover" style={{ height: "500px" }} />
-                </div>
-                <div className="carousel-item" data-bs-interval="2500">
-                  <img src="/meeting_images/FOSS_Core_Photo_2.jpeg" className="d-block w-100 object-cover" style={{ height: "500px" }} alt="Slide 2" />
-                </div>
-                <div className="carousel-item" data-bs-interval="2500">
-                  <img src="/meeting_images/FOSS_Core_Photo_3.jpeg" className="d-block w-100 object-cover" style={{ height: "500px" }} alt="Slide 2" />
-                </div>
-                <div className="carousel-item" data-bs-interval="2500">
-                  <img src="/meeting_images/FOSS_Core_Photo_4.jpeg" className="d-block w-100 object-cover" style={{ height: "500px" }} alt="Slide 2" />
-                </div>
-              </div>
-              
-              <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Previous</span>
-              </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="visually-hidden">Next</span>
-              </button>
-            </div>
-            {/* Ends here, previous code is below */}
-              {/* <Image
-                src="/meeting_images/FOSS Core 2026.jpeg"
-                alt="FOSS Club Community Meeting"
-                width={1000}
-                height={600}
-                className="rounded-2xl object-cover w-full h-auto shadow-2xl"
-              /> */}
+              <ImageCarousel />
             </motion.div>
           </motion.div>
         </div>
