@@ -309,7 +309,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     id: 25,
-    name: "Chandani Iyer",
+    name: "Chandni Iyer",
     designation: "Head - Social Media and Content Writing Dept.",
     image:"/core_images/Chandani_SMCW_Head.jpeg",
     socials: {
