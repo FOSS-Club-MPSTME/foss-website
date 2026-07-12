@@ -110,7 +110,7 @@ const events = [
       "Interactive technical games and quizzes with exciting rewards",
       "Open discussions on Free and Open Source Software and its impact",
       "Networking opportunities with club members and mentors",
-      "⁠Overview of club activities, events, projects, and opportunities to get involved"
+      "Overview of club activities, events, projects, and opportunities to get involved"
     ],
     icon: Presentation,
     color: "from-indigo-500/20 to-blue-500/20",
@@ -177,6 +177,27 @@ const events = [
 ];
 
 const upcomingEvents: typeof events = [
+  {
+    id: 11,
+    title: "FOSS Unlocked 2.0",
+    type: "Club Orientation",
+    date: "To be Announced",
+    location: "MPSTME, Vileparle",
+    participants: "100+ Freshers",
+    description: "The official introductory event of FOSS Club MPSTME, designed to welcome first-year students into the open-source community. Through engaging activities, technical games, and interactive discussions, participants explored Free and Open Source Software (FOSS), learned about the club's initiatives, and connected with the committee and mentors",
+    highlights: [
+      "100+ Freshers introduced to FOSS Community",
+      "Interactive technical games and quizzes with exciting rewards",
+      "Open discussions on Free and Open Source Software and its impact",
+      "Networking opportunities with club members and mentors",
+      "Overview of club activities, events, projects, and opportunities to get involved",
+      "Display of Club Projects and Activities done throghout last year",
+      "Fun Games and Interactive Activities with the OC"
+    ],
+    icon: Presentation,
+    color: "from-indigo-500/20 to-blue-500/20",
+    status: "upcoming"
+  },
   {
     id: 9,
     title: "Hackathon Readiness Workshop",
