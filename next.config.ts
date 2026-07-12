@@ -11,7 +11,7 @@ const nextConfig: NextConfig = {
             value: '://fossmpstme.com',
           },
         ],
-        destination: 'https://formbricks.com',
+        destination: 'https://app.formbricks.com/s/cmqwmpfyp4iub01xl8ysq4j9b',
         permanent: true,
       },
     ]
