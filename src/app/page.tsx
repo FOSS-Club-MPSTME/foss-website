@@ -174,11 +174,11 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              <Link href="/contact">
+              <a href="https://executiverecruitment.fossmpstme.com" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="primary-gradient text-white px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 glow">
                   Join Our Community
                 </Button>
-              </Link>
+              </a>
               <Link href="/events">
                 <Button variant="outline" size="lg" className="px-8 py-6 text-lg border-2 hover:bg-accent transition-all duration-300 backdrop-blur-sm">
                   Explore Events
