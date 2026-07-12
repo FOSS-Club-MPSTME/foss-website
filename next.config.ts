@@ -1,7 +1,21 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/',
+        has: [
+          {
+            type: 'host',
+            value: '://fossmpstme.com',
+          },
+        ],
+        destination: 'https://formbricks.com',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 export default nextConfig;
