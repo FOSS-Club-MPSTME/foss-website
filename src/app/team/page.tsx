@@ -351,7 +351,7 @@ const teamMembers: TeamMember[] = [
     id: 31,
     name: "Mahi Jain",
     designation: "Head - Research and Development Dept.",
-    image:"/core_images/Mahi-Jain-RND-Head.jpeg",
+    image:"/core_images/Mahi Jain Rnd Head.jpg",
     socials: {
       linkedin:"https://www.linkedin.com/in/mahi-jain-b8990939a?utm_source=share_via&utm_content=profile&utm_medium=member_android",
       github:"https://github.com/mahijaain"
