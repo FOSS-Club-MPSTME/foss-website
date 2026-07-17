@@ -219,16 +219,6 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
-    id: 17,
-    name: "Navya Bhatnagar",
-    designation: "Head - Marketing Dept.",
-    image: "/core_images/Navya_Bhatnagar_Marketing_Head.jpg",
-    socials: {
-      linkedin:"https://www.linkedin.com/in/navya-bhatnagar/",
-      github: "https://github.com/navya-cyb"
-    }
-  },
-  {
     id: 18,
     name: "Vedang Mane",
     designation: "Head - Marketing Dept.",
@@ -241,7 +231,7 @@ const teamMembers: TeamMember[] = [
   {
     id: 19,
     name: "Kashvi Kotecha",
-    designation: "Sub Head - Marketing Dept.",
+    designation: "Head - Marketing Dept.",
     image: "/core_images/Kashvi_Kotecha_Marketing_Subhead.jpg",
     socials: {
       linkedin:"https://www.linkedin.com/in/kashvi-kotecha-830449371/",
@@ -268,6 +258,16 @@ const teamMembers: TeamMember[] = [
     }
   },
   {
+    id: 29,
+    name: "Aarush Atale",
+    designation: "Head - Digital Creatives Dept.",
+    image:"/core_images/Aarush-Atale-DC-Subhead.jpeg",
+    socials: {
+      linkedin:"https://www.linkedin.com/in/aarush-atale-b9379934b/",
+      github:"https://github.com/Aarush-ron"
+    }
+  },
+  {
     id: 22,
     name: "Shardul Sonparote",
     designation: "Sub Head - Digital Creatives Dept.",
@@ -275,16 +275,6 @@ const teamMembers: TeamMember[] = [
     socials: {
       linkedin:"https://www.linkedin.com/in/shardul-sonparote-2b682941a?trk=contact-info",
       github:"https://github.com/Sharduljs"
-    }
-  },
-  {
-    id: 29,
-    name: "Aarush Atale",
-    designation: "Sub Head - Digital Creatives Dept.",
-    image:"/core_images/Aarush-Atale-DC-Subhead.jpeg",
-    socials: {
-      linkedin:"https://www.linkedin.com/in/aarush-atale-b9379934b/",
-      github:"https://github.com/Aarush-ron"
     }
   },
   {
